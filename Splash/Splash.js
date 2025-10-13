@@ -25,7 +25,7 @@ const Splash = ({navigation}) => {
             <View style={styles.container}>
                 <FastImage
                     style={styles.image}
-                    // source={require('../Splash/Splash.png')}
+                    source={require('../Splash/Splash.gif')}
                     resizeMode='stretch'
                     priority={FastImage.priority.high}
                 />
