@@ -24,7 +24,7 @@ const App = () => {
   const [canGoBack, setCanGoBack] = useState(false);
   const [showSpinner, setShowSpinner] = useState(true);
   const [isConnected, setIsConnected] = useState(null);
-  const [webUrl, setWebUrl] = useState(generateNoCacheUrl('https://protocol.shrikashivishwanath.org/'));
+  const [webUrl, setWebUrl] = useState(generateNoCacheUrl('https://requestprotocol.shrikashivishwanath.org/login'));
 
   const colorScheme = useColorScheme();
   const isDarkMode = colorScheme === 'dark';
@@ -120,7 +120,7 @@ const App = () => {
         }}
         onError={() => setShowSpinner(false)}
         onNavigationStateChange={(navState) => {
-          const isHome = navState.url === 'https://protocol.shrikashivishwanath.org/'; //https://protocol.shrikashivishwanath.org/
+          const isHome = navState.url === 'https://requestprotocol.shrikashivishwanath.org/login'; //https://protocol.shrikashivishwanath.org/
           const canGo = !isHome && navState.canGoBack;
           setCanGoBack(canGo);
           canGoBackRef.current = canGo;
